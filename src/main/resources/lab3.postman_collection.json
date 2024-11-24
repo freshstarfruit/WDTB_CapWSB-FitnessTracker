@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "f9abf910-af51-4323-8fff-81ddf5df5e89",
+		"name": "TrainingController API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39450814"
+	},
+	"item": [
+		{
+			"name": "Create training",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"startTime\": \"2024-05-01T10:00:00\",\r\n    \"endTime\": \"2024-05-01T12:00:00\",\r\n    \"activityType\": \"RUNNING\",\r\n    \"distance\": 5.5,\r\n    \"averageSpeed\": 7.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2137/v1/trainings",
+					"host": [
+						"localhost"
+					],
+					"port": "2137",
+					"path": [
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all trainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2137/v1/trainings",
+					"host": [
+						"localhost"
+					],
+					"port": "2137",
+					"path": [
+						"v1",
+						"trainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get trainings by user ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2137/v1/trainings/1",
+					"host": [
+						"localhost"
+					],
+					"port": "2137",
+					"path": [
+						"v1",
+						"trainings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update training",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startTime\": \"2024-06-01T10:00:00\",\r\n    \"endTime\": \"2024-06-01T12:00:00\",\r\n    \"activityType\": \"CYCLING\",\r\n    \"distance\": 20.0,\r\n    \"averageSpeed\": 15.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:2137/v1/trainings/1",
+					"host": [
+						"localhost"
+					],
+					"port": "2137",
+					"path": [
+						"v1",
+						"trainings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get trainings after end date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2137/v1/trainings/finished/2024-05-01T00:00:00.000+00:00",
+					"host": [
+						"localhost"
+					],
+					"port": "2137",
+					"path": [
+						"v1",
+						"trainings",
+						"finished",
+						"2024-05-01T00:00:00.000+00:00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get trainings by activity yype",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2137/v1/trainings/activityType?activityType=RUNNING",
+					"host": [
+						"localhost"
+					],
+					"port": "2137",
+					"path": [
+						"v1",
+						"trainings",
+						"activityType"
+					],
+					"query": [
+						{
+							"key": "activityType",
+							"value": "RUNNING"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
