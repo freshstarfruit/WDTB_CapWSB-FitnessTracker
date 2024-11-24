@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserProvider {
-
     /**
      * Retrieves a user based on their ID.
      * If the user with given ID is not found, then {@link Optional#empty()} will be returned.

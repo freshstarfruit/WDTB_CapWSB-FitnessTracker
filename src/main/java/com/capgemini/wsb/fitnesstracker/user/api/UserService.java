@@ -1,5 +1,7 @@
 package com.capgemini.wsb.fitnesstracker.user.api;
 
+import org.springframework.stereotype.Service;
+
 import java.util.Optional;
 
 /**
