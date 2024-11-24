@@ -1,6 +1,7 @@
 package com.capgemini.wsb.fitnesstracker.user.internal;
 
 import com.capgemini.wsb.fitnesstracker.user.api.User;
+import com.capgemini.wsb.fitnesstracker.user.api.UserDto;
 import com.capgemini.wsb.fitnesstracker.user.api.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,8 +16,7 @@ import java.util.List;
 class UserController {
 
     private final UserServiceImpl userService;
-
-    private final UserMapper userMapper;
+    private final UserMapperInternal userMapper;
 
     @GetMapping
     public List<UserDto> getAllUsers() {
